@@ -802,7 +802,7 @@ def keyUp(key, _pause=True):
     if _pause and PAUSE != 0:
         time.sleep(PAUSE)
 
-def press(keys, _pause=True):
+def press(keys, rep=1, _pause=True):
     """Performs a keyboard key press down, followed by a release.
 
     Args:
@@ -821,14 +821,14 @@ def press(keys, _pause=True):
                 lowerKeys.append(s.lower())
             else:
                 lowerKeys.append(s)
-
-    for k in keys:
-        _failSafeCheck()
-        platformModule._keyDown(k)
-        platformModule._keyUp(k)
-
-    if _pause and PAUSE != 0:
-        time.sleep(PAUSE)
+    for i in range(rep):
+        for k in keys:
+            _failSafeCheck()
+            platformModule._keyDown(k)
+            platformModule._keyUp(k)
+    
+        if _pause and PAUSE != 0:
+            time.sleep(PAUSE)
 
 def typewrite(message, interval=0.0, _pause=True):
     """Performs a keyboard key press down, followed by a release, for each of

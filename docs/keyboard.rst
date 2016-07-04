@@ -41,11 +41,12 @@ The ``press()`` function is really just a wrapper for the ``keyDown()`` and ``ke
     >>> pyautogui.press('left')     # press the left arrow key
     >>> pyautogui.keyUp('shift')    # release the shift key
 
-To press multiple keys similar to what ``typewrite()`` does, pass a list of strings to ``press()``. For example:
+To press multiple keys similar to what ``typewrite()`` does, pass a list of strings to ``press()`` or define numericaly how many presses. For example:
 
 .. code:: python
 
     >>> pyautogui.press(['left', 'left', 'left'])
+    >>> pyautogui.press('left', presses=3)
 
 
 The hotkey() Function
@@ -95,7 +96,7 @@ The following are the valid strings to pass to the ``press()``, ``keyDown()``, `
     'num7', 'num8', 'num9', 'numlock', 'pagedown', 'pageup', 'pause', 'pgdn',
     'pgup', 'playpause', 'prevtrack', 'print', 'printscreen', 'prntscrn',
     'prtsc', 'prtscr', 'return', 'right', 'scrolllock', 'select', 'separator',
-    'shift', 'shiftleft', 'shiftright', 'sleep', 'stop', 'subtract', 'tab',
+    'shift', 'shiftleft', 'shiftright', 'sleep', 'stop', 'subtract', 'super','tab',
     'up', 'volumedown', 'volumemute', 'volumeup', 'win', 'winleft', 'winright', 'yen',
     'command', 'option', 'optionleft', 'optionright']
 

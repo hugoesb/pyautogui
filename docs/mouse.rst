@@ -67,6 +67,8 @@ Here is the Python 2 version:
     except KeyboardInterrupt:
         print '\n'
 
+You can use ``displayMousePosition()`` to get position and RGB color code interactively. 
+
 To check if XY coordinates are on the screen, pass them (either as two integer arguments or a single tuple/list arguments with two integers) to the ``onScreen()`` function, which will return ``True`` if they are within the screen's boundaries and ``False`` if not. For example:
 
 .. code:: python

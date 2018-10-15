@@ -10,7 +10,7 @@ This is a quickstart reference to using PyAutoGUI. PyAutoGUI is cross-platform G
 
     >>> import pyautogui
 
-PyAutoGUI works on Windows/Mac/Linux and on Python 2 & 3. Install from PyPI with `pip install pyautogui`.
+PyAutoGUI works on Windows/Mac/Linux and on Python 2 & 3. Install from PyPI with `python -m pip install pyautogui`.
 
 General Functions
 -----------------
